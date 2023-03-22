@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "f69ca279-5212-4afe-8653-09c17f9cf70a",
+		"name": "DynamicTables",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21535489"
+	},
+	"item": [
+		{
+			"name": "DynamicTables",
+			"item": [
+				{
+					"name": "CreateTable",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"table_name\": \"hhh\",\n    \"fields\": [{\n        \"title\": \"name\",\n        \"type\": \"string\"\n    },\n    {\n        \"title\": \"year\",\n        \"type\": \"number\"\n    },\n    {\n        \"title\": \"active\",\n        \"type\": \"boolean\"\n    }]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/table/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"table",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateTable",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"table_name\": \"cat\",\n    \"fields\": [{\n        \"title\": \"name\",\n        \"type\": \"string\"\n    },\n    {\n        \"title\": \"age\",\n        \"type\": \"number\"\n    },\n    {\n        \"title\": \"iq\",\n        \"type\": \"number\"\n    }]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/table/dog/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"table",
+								"dog",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get or add Table Records",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"ahmedZakiahmed\",\n    \"year\": \"1999\",\n    \"active\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/table/cat/row/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"table",
+								"cat",
+								"row",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
