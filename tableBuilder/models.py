@@ -39,9 +39,9 @@ class TableSchema(models.Model):
 class TableFieldSchema(models.Model):
     
     DATA_TYPES = {
-        'string': models.CharField,
-        'number': models.IntegerField,
-        'boolean': models.BooleanField
+        'string',
+        'number',
+        'boolean'
     }
     
     name = models.CharField(max_length=100)
